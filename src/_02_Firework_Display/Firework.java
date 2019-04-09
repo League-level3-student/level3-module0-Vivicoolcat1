@@ -19,7 +19,7 @@ public class Firework{
 	
 	public Firework() {
 		//2. Initialize the Spark array to contain 100 Sparks. 
-sparks = new Spark [1000];
+sparks = new Spark [50];
 		
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
@@ -58,8 +58,10 @@ sparks = new Spark [1000];
 			if(s.y >= FireworkDisplay.HEIGHT) {
 				s.dead = true;
 			}
-		
-		
+		}
+			for (int i = 0; i < sparks.length; i++) {
+				
+			
 			if(!sparks[i].dead) {
 				dead = false;
 				break;

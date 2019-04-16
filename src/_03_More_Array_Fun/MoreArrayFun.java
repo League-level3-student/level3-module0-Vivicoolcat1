@@ -15,6 +15,7 @@ public class MoreArrayFun {
 		stringprint(s);
 	stringreverse(s);
 	stringeveryother(s);
+	randomString(s);
 	}
 	
 	//2. Write a method that takes an array of Strings and prints all the Strings in the array.
@@ -42,7 +43,7 @@ public class MoreArrayFun {
 			
 			if(i%2 ==0) {
 				System.out.println("Every Other String is " + stringsarray[i]); 
-			}
+			}}
 			
 			
 			
@@ -53,6 +54,31 @@ public class MoreArrayFun {
 	
 	//5. Write a method that takes an array of Strings and prints all the Strings in the array
 	//   in a completely random order. Almost every run of the program should result in a different order.
-	
+	public static void randomString(String [] stringsarray2) {
+		Random rand = new Random();
+		int idx0;
+		int idx1;
+		
+		for (int i = 0; i < 100; i++) {
+			idx0 = rand.nextInt(5);
+			idx1 = rand.nextInt(5);
+			
+			String temp= stringsarray2[idx0];
+			temp = stringsarray2[idx0]; 
+			stringsarray2[idx0] = stringsarray2[idx1];
+			stringsarray2[idx1] = temp;
+			
+			
+			}
+		for (int i = 0; i < stringsarray2.length; i++) {
+			
+			System.out.println("The random string " + stringsarray2[i]);
+		}
+		
+		
+		}
+		
+		
 	}
-}
+
+
